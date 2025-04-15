@@ -1,0 +1,13 @@
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\entity\User.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\dto\AuthResponse.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\entity\Role.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\controller\AuthController.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\config\SecurityBeansConfig.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\repository\RoleRepository.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\AuthServiceApplication.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\repository\UserRepository.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\config\SecurityConfig.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\service\UserService.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\dto\AuthRequest.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\dto\RegisterRequest.java
+D:\auth-service\auth-service\src\main\java\org\payroll\info\services\service\JwtService.java
