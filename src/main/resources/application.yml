@@ -4,6 +4,8 @@ server:
 spring:
   application:
     name: auth-service
+#    config:
+#      import: optional:configserver:http://localhost:8888
   datasource:
     url: jdbc:mysql://localhost:3306/payroll
     username: root
@@ -16,10 +18,15 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.MySQL8Dialect
 
+logging:
+  level:
+    org.springframework.security: DEBUG
+
 #eureka:
 #  client:
-#    serviceUrl:
+#    service-url:
 #      defaultZone: http://localhost:8761/eureka/
+
 
 jwt:
   secret: BF7FD11ACE545745B7BA1AF98B6F156D127BC7BB544BAB6A4FD74E4FC7

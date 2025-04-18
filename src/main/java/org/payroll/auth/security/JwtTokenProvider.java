@@ -28,8 +28,8 @@ public class JwtTokenProvider {
                 .collect(Collectors.joining(","));
 
         return Jwts.builder()
-                .setSubject(userPrincipal.getId().toString())
-                .claim("username", userPrincipal.getUsername())
+                .setSubject(userPrincipal.getUsername()) // use username here
+                .claim("userId", userPrincipal.getId())
                 .claim("role", roles)
                 .setIssuedAt(new Date())
                 .setExpiration(new Date(System.currentTimeMillis() + jwtExpirationMs))
@@ -37,10 +37,9 @@ public class JwtTokenProvider {
                 .compact();
     }
 
-    public String getUserIdFromToken(String token) {
-        Claims claims = Jwts.parserBuilder().setSigningKey(getSigningKey()).build()
-                .parseClaimsJws(token).getBody();
-        return claims.getSubject();
+    public String getUsernameFromToken(String token) {
+        return Jwts.parserBuilder().setSigningKey(getSigningKey()).build()
+                .parseClaimsJws(token).getBody().getSubject();
     }
 
     public boolean validateToken(String token) {
